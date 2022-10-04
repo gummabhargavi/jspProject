@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+ xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<h:body>
+      <center> 
+        <h2><h:outputText value="Employ Record"/></h2>
+      </center>
+      <h:dataTable value="#{employDAO.showEmploy()}" var="e" border="3">
+        <h:column>
+           <f:facet name="header">Employ No</f:facet>
+           <h:outputText value="#{e.empno}"/>
+        </h:column>
+        
+        <h:column>
+           <f:facet name="header">Employ No</f:facet>
+           <h:outputText value="#{e.name}"/>
+        </h:column>
+        
+        <h:column>
+           <f:facet name="header">Employ No</f:facet>
+           <h:outputText value="#{e.dept}"/>
+        </h:column>
+        
+        <h:column>
+           <f:facet name="header">Employ No</f:facet>
+           <h:outputText value="#{e.desig}"/>
+        </h:column>
+        
+        <h:column>
+           <f:facet name="header">Employ No</f:facet>
+           <h:outputText value="#{e.basic}"/>
+        </h:column>
+      </h:dataTable>
+</h:body>
+</html>
