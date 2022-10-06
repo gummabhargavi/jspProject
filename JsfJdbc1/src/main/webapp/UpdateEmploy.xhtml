@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<h:body>
+   <h:form>
+     <h2 style="text-align: center" class="col-sm-4">Edit your Record</h2>
+     <hr/>
+     Employ No
+          <h:inputText id="empno" value="#{editEmploy.empno}" /> <br/>
+     Employ Name
+          <h:inputText id="name" value="#{editEmploy.name}" />  <br/>
+     Department 
+          <h:inputText id="dept" value="#{editEmploy.dept}" />   <br/>
+     Designation
+           <h:inputText id="desig" value="#{editEmploy.desig}" />  <br/>
+     Basic
+           <h:inputText id="basic" value="#{editEmploy.basic}" />  <br/>
+       <h:commandButton value="Update" action="#{employDAO.updateEmploy(editEmploy)}" />                   
+   </h:form>
+</h:body>
+</html>
