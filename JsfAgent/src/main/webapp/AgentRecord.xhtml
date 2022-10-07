@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+ xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+</head>
+<h:body>
+  <h:form>
+
+      <center>
+             <h2><h:outputText value="Agent Record"/></h2>
+             
+       </center>
+       <center>
+       <h:dataTable value="#{agentDAO.showAgent()}" var="e" border="2">
+     <h:column>
+          <f:facet name="header">Agent Id </f:facet>
+          <h:outputText value="#{e.agentId}"/>
+     
+     </h:column>
+     <h:column>
+          <f:facet name="header"> Name </f:facet>
+          <h:outputText value="#{e.name}"/>
+     
+     </h:column>
+     
+     <h:column>
+          <f:facet name="header">City </f:facet>
+          <h:outputText value="#{e.city}"/>
+     
+     </h:column>
+     <h:column>
+          <f:facet name="header">gender </f:facet>
+          <h:outputText value="#{e.gender}"/>
+     
+     </h:column>
+     <h:column>
+          <f:facet name="header"> MaritalStatus</f:facet>
+          <h:outputText value="#{e.maritalStatus}"/>
+     
+     </h:column>
+     <h:column>
+          <f:facet name="header">  Premium</f:facet>
+          <h:outputText value="#{e. premium}"/>
+     
+     </h:column>
+     
+      <h:column>
+     <f:facet name="header"> Update</f:facet>
+     <h:commandButton action="#{agentDAO.searchAgent(e.agentId)}"
+     value="Update">
+     </h:commandButton>
+     </h:column>
+      
+      <h:column>
+         <f:facet name="header">Delete</f:facet>
+         <h:commandButton action="#{agentDAO.deleteAgent(e.agentId)}"
+           value="Delete"></h:commandButton>
+         </h:column>
+      
+     </h:dataTable>
+    </center>
+    <center>
+<h:commandButton action="CreateAgent.xhtml?faces-redirect=true"
+value="Create Agent" />
+</center>
+</h:form>
+</h:body>
+</html>
