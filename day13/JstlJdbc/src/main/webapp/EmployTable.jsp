@@ -38,6 +38,8 @@
          <td><c:out value="${employ.desig}"/> <br/> </td> 
          <td><c:out value="${employ.basic}"/> <br/> </td> 
          <td><a href="EmploySearchNew.jsp?empno=${eno}" >Search</a> </td>
+         <td><a href="EmployUpdate.jsp?empno=${eno}" >Update</a> </td>
+         <td><a href="EmployDelete.jsp?empno=${eno}" >Delete</a> </td>
          </tr>
          </c:forEach>
          </table>
