@@ -83,5 +83,23 @@ public class LibraryDAO {
 		return listUsers.size();
 		
 	} 
-
+//	public String returnBook(TransReturn transReturn) {
+//		sessionFactory = SessionHelper.getConnection();
+//		Session session = sessionFactory.openSession();
+//		if (returnOrNot(transReturn.getBookId())==1) {
+//			return "Book with id " +transReturn.getBookId() + " Already returned...";
+//		} 
+//		Transaction tran = session.beginTransaction();
+//		session.save(transReturn);
+//		tran.commit();
+//		session.close();
+//		session = sessionFactory.openSession();
+//		Books book = searchById(transReturn.getBookId());
+//		book.setTotalBooks(book.getTotalBooks()-1);
+//		tran=session.beginTransaction();
+//		session.saveOrUpdate(book);
+//		tran.commit();
+//		return "Book with Id " +transReturn.getBookId() + " return Successfully...";
+//	}
+	
 }

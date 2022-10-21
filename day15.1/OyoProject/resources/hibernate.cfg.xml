@@ -6,12 +6,9 @@
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">india@123</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/oyo</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <mapping class="com.infinite.hiblibrary.LibUsers"/>
-        <mapping class="com.infinite.hiblibrary.Books"/>
-        <mapping class="com.infinite.hiblibrary.TranBook"/>
-        <mapping class="com.infinite.hiblibrary.TransReturn"/>
-        </session-factory>
+        <mapping class="com.infinite.oyoproject.Room"/>
+    </session-factory>
 </hibernate-configuration>

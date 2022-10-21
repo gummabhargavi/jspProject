@@ -24,6 +24,7 @@
 		 <th>Dept</th>
 		 <th>Total Books</th>
 		 <th> Select </th>
+		 <th>Return</th>
 	    </tr>
 	  <c:forEach var="books" items="${beanDao.searchBooks(searchtype,searchvalue)}">
 	  	<tr>
