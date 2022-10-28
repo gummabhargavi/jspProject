@@ -9,6 +9,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Projections;
 
 
 
@@ -66,5 +67,40 @@ public class CollegeDAO {
 	return "Added Course" ;
 	   
 	}
+	
+	public String addFeedback(Feedback feedback) {
+		sessionFactory = SessionHelper.getConnection();
+		Session session = sessionFactory.openSession();
+		
+		Transaction transaction = session.beginTransaction();
+		session.save(feedback);
+		transaction.commit();
+		session.close();
+		
+		return "Feedback Added.";
 
+}
+	public List<String> instructors() {
+		sessionFactory=SessionHelper.getConnection();
+		Session session = sessionFactory.openSession();
+		
+		Criteria criteria = session.createCriteria(Subject.class);
+		criteria.setProjection(Projections.distinct(Projections.property("instructor")));
+		
+		List<String> courselist = criteria.list();
+		
+		return courselist;
+	}
+	
+	public String addSubject(Subject subject) {
+		sessionFactory = SessionHelper.getConnection();
+		Session session = sessionFactory.openSession();
+		
+		Transaction transaction = session.beginTransaction();
+		session.save(subject);
+		transaction.commit();
+		session.close();
+		
+		return "Subject Added.";
+	}
 }
